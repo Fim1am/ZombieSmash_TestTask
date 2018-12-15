@@ -10,11 +10,13 @@ public class UnitAnnihilator : MonoBehaviour
     {
         Unit unit = _col.GetComponent<Unit>();
 
-        if(unit)
+        //Debug.Log(unit.name);
+
+        if(unit != null)
         {
             Zombie zombie = unit.gameObject.GetComponent<Zombie>();
 
-            if(zombie)
+            if(zombie != null)
             {
                 OnZombiePassed?.Invoke();
             }
