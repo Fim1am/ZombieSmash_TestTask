@@ -12,17 +12,11 @@ public class MenuPanel : MonoBehaviour
     private Text timerText;
 
     [SerializeField]
-    private TimerPanel timerPanel;
-
-    private void OnEnable()
-    {
-        timerPanel.gameObject.SetActive(false);
-    }
+    private TimeController timeController;
 
     public void PlayButton()
     {
-        timerPanel.gameObject.SetActive(true);
-        timerPanel.StartGame();
+        timeController.StartGame();
         gameObject.SetActive(false);
     }
 

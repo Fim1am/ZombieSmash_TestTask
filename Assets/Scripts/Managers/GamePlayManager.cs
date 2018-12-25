@@ -19,7 +19,7 @@ public class GamePlayManager : MonoBehaviour
     private UnitAnnihilator unitAnnihilator;
 
     [SerializeField]
-    private TimerPanel timerPanel;
+    private TimeController timeController;
    
     public int currentLevel { get; private set; }
 
@@ -83,8 +83,7 @@ public class GamePlayManager : MonoBehaviour
         unitSpawner.gameObject.SetActive(false);
         unitSpawner.DestroyAllUnits();
 
-        timerPanel.gameObject.SetActive(true);
-        timerPanel.IncrementLevel(IncrementLevel);
+        timeController.IncrementLevel(IncrementLevel);
     }
 
     private void ZombiePassed()

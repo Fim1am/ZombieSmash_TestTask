@@ -15,14 +15,13 @@ public class GamePanel : MonoBehaviour
     private GameObject gameoverPanel, levelPanel, menuPanel;
 
     [SerializeField]
-    private TimerPanel timerPanel;
+    private TimeController timeController;
 
     private GamePlayManager currentGameplay;
 
     private void OnEnable()
     {
         gameoverPanel.SetActive(false);
-        timerPanel.gameObject.SetActive(false);
     }
 
     public void InitPanel(GamePlayManager _gameplay)
@@ -69,8 +68,7 @@ public class GamePanel : MonoBehaviour
     
     public void TryAgainButton()
     {
-        timerPanel.gameObject.SetActive(true);
-        timerPanel.StartGame();
+        timeController.StartGame();
         gameoverPanel.SetActive(false);
     }
 

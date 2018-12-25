@@ -9804,6 +9804,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 157256177}
+  - component: {fileID: 157256178}
   m_Layer: 9
   m_Name: environment
   m_TagString: Untagged
@@ -9848,6 +9849,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &157256178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157256176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fca23a5fa3a39e4487c4c292f45d443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerPanel: {fileID: 1018596867}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -19978,7 +19991,7 @@ MonoBehaviour:
   gameoverPanel: {fileID: 1056042969}
   levelPanel: {fileID: 317859596}
   menuPanel: {fileID: 1972511800}
-  timerPanel: {fileID: 1018596867}
+  timeController: {fileID: 157256178}
 --- !u!1 &340671627
 GameObject:
   m_ObjectHideFlags: 0
@@ -44078,7 +44091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1ce7ed56ddb654693b20bd4c33cff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSettings: {fileID: 11400000, guid: 95ed403375b6d6b41828ce135f96ff27, type: 2}
   timerText: {fileID: 1168419945}
 --- !u!1 &1056042969
 GameObject:
@@ -92217,7 +92229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1168419945}
-  timerPanel: {fileID: 1018596867}
+  timeController: {fileID: 157256178}
 --- !u!222 &1972511803
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -101993,4 +102005,4 @@ MonoBehaviour:
   gamePanel: {fileID: 338545479}
   unitSpawner: {fileID: 810698366}
   unitAnnihilator: {fileID: 841042594}
-  timerPanel: {fileID: 1018596867}
+  timeController: {fileID: 157256178}
